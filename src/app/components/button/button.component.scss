@@ -1,0 +1,15 @@
+@import "../../../styles.scss";
+
+
+button{
+  color: $light-font;
+  padding: 10px;
+  border: none;
+  cursor: pointer;
+  font-size: 20px;
+
+ &:hover{
+    opacity: 80%;
+  }
+}
+

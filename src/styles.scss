@@ -1,1 +1,24 @@
 /* You can add global styles to this file, and also import other style files */
+
+$primary: #044FA1;
+$secondary: #FBDC51 ;
+$light-font: #ffffff;
+$confirm:#3bf770 ;
+$cancel: #f73b3b ;
+$light-background: #ffffff;
+$dark-font: #595959;
+$border: #aaaaaa ;
+$border-light: #ededed;
+$transparent-dark: rgb(0, 0, 0,0.7);
+
+
+body {
+  height: 100vh;
+  margin: 0;
+
+  .root{
+    display: block;
+   width: 100vw;
+   height: 100vh;
+  }
+}
