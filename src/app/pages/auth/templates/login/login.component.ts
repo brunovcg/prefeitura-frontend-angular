@@ -19,8 +19,10 @@ export class LoginComponent {
 
   cpf: string = 'CPF'
   cpfPlaceholder: string = 'Digite o CPF'
+  cpfError: string = ''
   password: string = 'Password'
   passwordPlaceholder: string = 'Digite a senha'
+  passwordError: string = ''
   inputPassword: 'password' = 'password'
 
   submitText='Submeter'
@@ -35,7 +37,30 @@ export class LoginComponent {
     this.payload = {...this.payload, password: event.target.value}
   }
 
+  cleanCPFError (){
+    this.cpfError = ''
+  }
+
+  cleanPasswordError (){
+    this.passwordError = ''
+  }
+
   handleSubmit(){
+
+    let error = false
+    if(!this.payload.username){
+      this.cpfError = 'Esse campo é obrigatório'
+      error = true
+    }
+    if(!this.payload.password){
+      this.passwordError = 'Esse campo é obrigatório'
+      error = true
+    }
+
+    if (error){
+      return
+    }
+
    this.userServiceService.userLogin(this.payload)
    .subscribe({
     next: (res)=> {
