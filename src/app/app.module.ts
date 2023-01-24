@@ -12,6 +12,9 @@ import { SignupComponent } from './pages/auth/templates/signup/signup.component'
 import { InputComponent } from './components/input/input.component';
 import { HttpClientModule, HttpClient } from '@angular/common/http';
 import { SelectComponent } from './components/select/select.component';
+import { TaxesComponent } from './pages/session/views/taxes/taxes.component';
+import { NewsComponent } from './pages/session/views/news/news.component';
+import { RegulationComponent } from './pages/session/views/regulation/regulation.component';
 
 
 @NgModule({
@@ -26,6 +29,9 @@ import { SelectComponent } from './components/select/select.component';
     SignupComponent,
     InputComponent,
     SelectComponent,
+    TaxesComponent,
+    NewsComponent,
+    RegulationComponent,
   ],
   imports: [
     BrowserModule,
