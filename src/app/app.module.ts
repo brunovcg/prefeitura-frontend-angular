@@ -7,6 +7,10 @@ import { AuthComponent } from './pages/auth/auth.component';
 import { SessionComponent } from './pages/session/session.component';
 import { ButtonComponent } from './components/button/button.component';
 import { IconComponent } from './components/icon/icon.component';
+import { LoginComponent } from './pages/auth/templates/login/login.component';
+import { SignupComponent } from './pages/auth/templates/signup/signup.component';
+import { InputComponent } from './components/input/input.component';
+import { HttpClientModule, HttpClient } from '@angular/common/http';
 
 
 @NgModule({
@@ -17,12 +21,16 @@ import { IconComponent } from './components/icon/icon.component';
     SessionComponent,
     ButtonComponent,
     IconComponent,
+    LoginComponent,
+    SignupComponent,
+    InputComponent,
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule
   ],
-  providers: [],
+  providers: [HttpClientModule],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
