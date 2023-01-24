@@ -16,42 +16,38 @@ export class AuthComponent {
 
   authTitle: AuthTitle = 'Login'
   renderer: AuthRenderer = 'login'
-  buttonText: AuthTitle = 'Login'
+  buttonText: AuthTitle = 'Signup'
   buttonTemplateBackground="#FBDC51"
   buttonTemplateIcon: AuthIcon='login'
   buttonHomeBackground='#044FA1'
   message: string = 'Ainda não é cadastrado?'
   homeIcon="house"
 
-
+  toggler = {
+    login: {
+     authTitle: 'Signup',
+     renderer: 'signup',
+     buttonText: 'Login',
+     buttonTemplateIcon:'how_to_reg',
+     message: 'Já é cadastrado?'
+    },
+    signup:{
+     authTitle: 'Login',
+     renderer: 'login',
+     buttonText: 'Signup',
+     buttonTemplateIcon:'login',
+     message:  'Ainda não é cadastrado?',
+    }
+ }
 
   onToogleTemplateClick(type: AuthRenderer){
-    const toggle = {
-       login: {
-        authTitle: 'Signup',
-        renderer: 'signup',
-        buttonText: 'Signup',
-        buttonTemplateBackground: '#3bf770',
-        buttonTemplateIcon:'how_to_reg',
-        message: 'Já é cadastrado?'
-       },
-       signup:{
-        authTitle: 'Login',
-        renderer: 'login',
-        buttonText: 'Login',
-        buttonTemplateBackground: "#FBDC51",
-        buttonTemplateIcon:'login',
-        message:  'Ainda não é cadastrado?',
-       }
-    }
-    this.authTitle = toggle[type].authTitle as AuthTitle
-    this.renderer = toggle[type].renderer as AuthRenderer
-    this.buttonText = toggle[type].buttonText as AuthTitle
-    this.buttonTemplateBackground = toggle[type].buttonTemplateBackground
-    this.buttonTemplateIcon = toggle[type].buttonTemplateIcon as AuthIcon
-    this.message = toggle[type].message
+    this.authTitle = this.toggler[type].authTitle as AuthTitle
+    this.renderer = this.toggler[type].renderer as AuthRenderer
+    this.buttonText = this.toggler[type].buttonText as AuthTitle
+    this.buttonTemplateIcon = this.toggler[type].buttonTemplateIcon as AuthIcon
+    this.message = this.toggler[type].message
   }
-  
+
   onHomeClick(){
       this.router.navigate([''])
   }

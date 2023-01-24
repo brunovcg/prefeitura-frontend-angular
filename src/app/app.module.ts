@@ -11,6 +11,7 @@ import { LoginComponent } from './pages/auth/templates/login/login.component';
 import { SignupComponent } from './pages/auth/templates/signup/signup.component';
 import { InputComponent } from './components/input/input.component';
 import { HttpClientModule, HttpClient } from '@angular/common/http';
+import { SelectComponent } from './components/select/select.component';
 
 
 @NgModule({
@@ -24,6 +25,7 @@ import { HttpClientModule, HttpClient } from '@angular/common/http';
     LoginComponent,
     SignupComponent,
     InputComponent,
+    SelectComponent,
   ],
   imports: [
     BrowserModule,

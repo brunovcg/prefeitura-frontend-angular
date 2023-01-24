@@ -17,10 +17,10 @@ export class LoginComponent {
 
   constructor(private userServiceService: UserServiceService, private router: Router ){}
 
-  cpf: string = 'CPF'
+  cpf: string = 'CPF*'
   cpfPlaceholder: string = 'Digite o CPF'
   cpfError: string = ''
-  password: string = 'Password'
+  password: string = 'Senha*'
   passwordPlaceholder: string = 'Digite a senha'
   passwordError: string = ''
   inputPassword: 'password' = 'password'
@@ -68,7 +68,11 @@ export class LoginComponent {
       this.router.navigate(['/session'])
 
     },
-    error: (err)=>console.log(err)
+    error: (err)=>{
+      if(err.status === 401){
+        alert('Usuário ou/e senha incorretos(s)')
+      }
+    }
    })
   }
 
@@ -76,5 +80,4 @@ export class LoginComponent {
     username: '',
     password: ''
   }
-
 }

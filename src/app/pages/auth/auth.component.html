@@ -6,7 +6,7 @@
   <div class="form-container">
     <app-login style="width:100%;" *ngIf="renderer==='login'; else signup "></app-login>
     <ng-template #signup>
-      <app-signup ></app-signup>
+      <app-signup (changeRenderer)="onToogleTemplateClick('signup')" style="width:100%;" ></app-signup>
     </ng-template>
   </div>
   <div class="message-container">
