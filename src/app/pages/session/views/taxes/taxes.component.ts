@@ -1,4 +1,8 @@
 import { Component } from '@angular/core';
+import { constants } from '../../../../constants/contants';
+import { Router } from '@angular/router';
+
+const {colors} = constants
 
 @Component({
   selector: 'app-taxes',
@@ -7,4 +11,11 @@ import { Component } from '@angular/core';
 })
 export class TaxesComponent {
 
+  constructor(private router: Router){}
+
+  handleClick(){
+    this.router.navigate(['buildings'])
+  }
+  buttonBackground = colors.primary
+  buttonText = "Acessar Imóveis"
 }

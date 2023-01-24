@@ -1,6 +1,10 @@
 import { Component, OnInit } from '@angular/core';
 import { StorageHelper } from 'src/app/helpers/storage';
 import { Router } from '@angular/router';
+import { User } from 'src/app/helpers/user';
+import {constants} from "src/app/constants/contants"
+
+const {colors} = constants
 
 @Component({
   selector: 'app-session',
@@ -14,7 +18,7 @@ export class SessionComponent implements OnInit {
   today = new Date().toLocaleDateString()
   user = {name: '', persona : 0}
 
-  logoutBackground="#f73b3b"
+  logoutBackground=colors.cancel
   logoutIcon="logout"
   logoutText='Logout'
 
@@ -24,7 +28,7 @@ export class SessionComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    const user = StorageHelper.get('prefeitura-user')
+    const user = User.get()
     this.user = user
   }
 }

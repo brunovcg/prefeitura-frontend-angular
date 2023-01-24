@@ -11,6 +11,8 @@ export interface SignupPayload  {
   persona: number
 }
 
+const {colors, personas} = constants
+
 interface SignupFields extends SignupPayload {
   confirmPassword: string
 }
@@ -89,7 +91,7 @@ export class SignupComponent {
 
   persona: string = 'Interesse*'
   personaError: string = ''
-  personaOptions = constants.personas
+  personaOptions = personas
   onPersonaChange(event: any){
     this.payload = {...this.payload, persona: Number(event.target.value)}
     this.emailError = ''
@@ -97,7 +99,7 @@ export class SignupComponent {
 
   submitText='Submeter'
   submitIcon='done'
-  submitColor='#3bf770'
+  submitColor=colors.confirm
 
   handleSubmit(){
 

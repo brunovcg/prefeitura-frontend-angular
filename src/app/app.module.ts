@@ -10,11 +10,14 @@ import { IconComponent } from './components/icon/icon.component';
 import { LoginComponent } from './pages/auth/templates/login/login.component';
 import { SignupComponent } from './pages/auth/templates/signup/signup.component';
 import { InputComponent } from './components/input/input.component';
-import { HttpClientModule, HttpClient } from '@angular/common/http';
+import { HttpClientModule } from '@angular/common/http';
 import { SelectComponent } from './components/select/select.component';
 import { TaxesComponent } from './pages/session/views/taxes/taxes.component';
 import { NewsComponent } from './pages/session/views/news/news.component';
 import { RegulationComponent } from './pages/session/views/regulation/regulation.component';
+import { BuildingsComponent } from './pages/buildings/buildings.component';
+import { BilletComponent } from './pages/billet/billet.component';
+import { NotFoundComponent } from './pages/not-found/not-found.component';
 
 
 @NgModule({
@@ -32,6 +35,9 @@ import { RegulationComponent } from './pages/session/views/regulation/regulation
     TaxesComponent,
     NewsComponent,
     RegulationComponent,
+    BuildingsComponent,
+    BilletComponent,
+    NotFoundComponent,
   ],
   imports: [
     BrowserModule,

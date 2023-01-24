@@ -2,11 +2,14 @@ import { Component } from '@angular/core';
 import {UserServiceService} from "../../../../services/user-service.service"
 import {StorageHelper} from "../../../../helpers/storage"
 import { Router } from '@angular/router';
+import { constants } from 'src/app/constants/contants';
 
 export type LoginPayload = {
   username: string
   password: string
 }
+
+const {colors} = constants
 
 @Component({
   selector: 'app-login',
@@ -27,7 +30,7 @@ export class LoginComponent {
 
   submitText='Submeter'
   submitIcon='done'
-  submitColor='#3bf770'
+  submitColor= colors.confirm
 
   onUsernameChange(event: any){
     this.payload = {...this.payload, username: event.target.value}

@@ -1,9 +1,12 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
+import { constants } from 'src/app/constants/contants';
 
 type AuthRenderer = 'login' | 'signup'
 type AuthTitle = 'Login' | 'Signup'
 type AuthIcon = 'how_to_reg' | 'login'
+
+const {colors} = constants
 
 @Component({
   selector: 'app-auth',
@@ -17,9 +20,9 @@ export class AuthComponent {
   authTitle: AuthTitle = 'Login'
   renderer: AuthRenderer = 'login'
   buttonText: AuthTitle = 'Signup'
-  buttonTemplateBackground="#FBDC51"
+  buttonTemplateBackground= colors.secondary
   buttonTemplateIcon: AuthIcon='login'
-  buttonHomeBackground='#044FA1'
+  buttonHomeBackground = colors.primary
   message: string = 'Ainda não é cadastrado?'
   homeIcon="house"
 
