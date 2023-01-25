@@ -19,6 +19,9 @@ import { BuildingsComponent } from './pages/buildings/buildings.component';
 import { BilletComponent } from './pages/billet/billet.component';
 import { NotFoundComponent } from './pages/not-found/not-found.component';
 import { BuildingsListComponent } from './pages/buildings/templates/buildings-list/buildings-list.component';
+import {MatDialogModule} from '@angular/material/dialog';
+import { AddBuildingComponent } from './modals/add-building/add-building.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 
 @NgModule({
@@ -40,11 +43,14 @@ import { BuildingsListComponent } from './pages/buildings/templates/buildings-li
     BilletComponent,
     NotFoundComponent,
     BuildingsListComponent,
+    AddBuildingComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    MatDialogModule,
+    BrowserAnimationsModule
   ],
   providers: [HttpClientModule],
   bootstrap: [AppComponent]

@@ -5,10 +5,10 @@ export const constants = {
     {value:3, text: 'Regulamentação' }
   ],
   neighborhoods: [
-    {value : 1, text : 'Madalena'},
-    {value : 2, text : 'Boa Viagem'},
-    {value : 3, text : 'Casa Forte'},
-    {value : 4, text : 'Torre'}
+    {value : 'Madalena', text : 'Madalena'},
+    {value : 'Boa Viagem', text : 'Boa Viagem'},
+    {value : 'Casa Forte', text : 'Casa Forte'},
+    {value : 'Torre', text : 'Torre'}
   ],
   colors: {
     primary: '#044FA1',

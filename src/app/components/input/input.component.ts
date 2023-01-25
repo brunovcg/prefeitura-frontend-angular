@@ -1,7 +1,7 @@
 import { Component, Input } from '@angular/core';
 const { v4: uuidv4 } = require('uuid');
 
-type InputType = 'text' | 'password'
+export type InputType = 'text' | 'password' | "number"
 
 @Component({
   selector: 'app-input',
@@ -14,6 +14,7 @@ export class InputComponent {
   @Input() label: string = ''
   @Input() errorMessage: string = ''
   @Input() placeholder: string = ''
+  @Input() value: string = ''
   inputId = uuidv4()
 
 }
