@@ -16,11 +16,22 @@ export class BuildingsListComponent  {
 
   @Input() buildings:BuildingResponse[]  = []
 
+  buttonCircle=true
+
+
+
   addText = "Cadastrar Imóvel"
   addIcon = "add"
   addBackground = colors.confirm
-
   addBuilding(){}
+
+  updateIcon = "edit"
+  updateBackground = colors.secondary
+  updateBuilding(){}
+
+  deleteIcon = "delete"
+  deleteBackground = colors.cancel
+  deleteBuilding(){}
 
 
   viewIcon="description"
@@ -28,7 +39,6 @@ export class BuildingsListComponent  {
   viewBackground = colors.primary
   viewBillet(building: BuildingResponse){
     this.router.navigateByUrl('session/buildings/billet', {state: {building}})
-
   }
 
 }

@@ -26,8 +26,7 @@ export class NotFoundComponent implements OnInit {
   buttonBackground = colors.primary
 
   handleClick(){
-    const path = this.user ? 'session' : 'home'
+    const path = this.user ? 'session' : ''
     this.router.navigate([path])
   }
-
 }

@@ -5,7 +5,8 @@ export class StorageHelper {
  }
 
  static get(key: string){
-  return JSON.parse(localStorage.getItem(key) || '')
+  const item  = localStorage.getItem(key)
+  return item ? JSON.parse(item) : ""
  }
 
  static clear():void{

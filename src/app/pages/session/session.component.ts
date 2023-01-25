@@ -30,6 +30,12 @@ export class SessionComponent implements OnInit {
 
   ngOnInit(): void {
     const user = User.get()
+
+    if (!user){
+      this.router.navigate([''])
+    }
+
     this.user = user
+
   }
 }

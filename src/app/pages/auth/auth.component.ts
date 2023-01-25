@@ -1,6 +1,7 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { constants } from 'src/app/constants/contants';
+import { User } from 'src/app/helpers/user';
 
 type AuthRenderer = 'login' | 'signup'
 type AuthTitle = 'Login' | 'Signup'
@@ -13,9 +14,15 @@ const {colors} = constants
   templateUrl: './auth.component.html',
   styleUrls: ['./auth.component.scss']
 })
-export class AuthComponent {
+export class AuthComponent implements OnInit {
 
   constructor(public router: Router){}
+  ngOnInit(): void {
+    const user = User.get()
+    if (user){
+      this.router.navigate(['session'])
+    }
+  }
 
   authTitle: AuthTitle = 'Login'
   renderer: AuthRenderer = 'login'
