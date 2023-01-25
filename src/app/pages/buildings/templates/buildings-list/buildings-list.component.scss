@@ -1,0 +1,47 @@
+@import "../../../../../styles.scss";
+
+.buildings-list{
+  width: 100%;
+  min-height: 200px;
+  max-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+
+
+  .list{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    overflow-y: auto;
+    width: 100%;
+
+
+    .building-row{
+      border: 1px solid $border;
+      font-weight: bold;
+      width: 90%;
+      padding:20px;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+
+      span{
+        font-weight: lighter;
+      }
+
+      .iptu{
+        display: flex;
+        gap: 20px;
+        align-items: center;
+      }
+
+    }
+
+  }
+
+
+}

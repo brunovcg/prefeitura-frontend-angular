@@ -14,7 +14,7 @@ export class TaxesComponent {
   constructor(private router: Router){}
 
   handleClick(){
-    this.router.navigate(['buildings'])
+    this.router.navigate(['session/buildings'])
   }
   buttonBackground = colors.primary
   buttonText = "Acessar Imóveis"

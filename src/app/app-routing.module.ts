@@ -11,8 +11,8 @@ const routes: Routes = [
   {path: '', component: HomeComponent},
   {path: 'auth', component: AuthComponent},
   {path: 'session', component: SessionComponent},
-  {path: 'buildings',component: BuildingsComponent},
-  {path: 'buildings/billet', component: BilletComponent},
+  {path: 'session/buildings',component: BuildingsComponent},
+  {path: 'session/buildings/billet', component: BilletComponent},
   {path: '**', pathMatch: 'full',component: NotFoundComponent },
 ];
 

@@ -27,6 +27,7 @@ export class SessionComponent implements OnInit {
     StorageHelper.clear()
   }
 
+
   ngOnInit(): void {
     const user = User.get()
     this.user = user
