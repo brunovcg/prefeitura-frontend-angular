@@ -28,9 +28,10 @@ export class AddBuildingComponent {
   ){
     if(data.state){
       this.title = 'Editar Imóvel'
-      this.areaValue = data.state.area
-      this.addressValue = data.state.address
-      this.neighborhoodValue = data.state.neighborhood
+      this.payload = {tamanho: data.state.tamanho, endereco : data.state.endereco, bairro: neighborhoods[0].text}
+      this.areaValue = data.state.tamanho
+      this.addressValue = data.state.endereco
+      this.neighborhoodValue = {value: data.state.bairro, text: data.state.bairro}
     } else{
       this.title = 'Novo Imóvel'
     }
@@ -64,7 +65,7 @@ export class AddBuildingComponent {
 
   neighborhoodLabel = "Bairro"
   neighborhoodOptions = neighborhoods
-  neighborhoodValue: {value: string, text:string} = neighborhoods[0]
+  neighborhoodValue = neighborhoods[1]
   onNeighborhoodChange(event: any){
     this.payload = {...this.payload, bairro: event.target.value}
   }
@@ -99,8 +100,7 @@ export class AddBuildingComponent {
       this.buildingServicesService.update(this.data.state.matricula, this.payload).subscribe({
         next: (res)=>{
           this.dialogRef.close();
-          this.data.state.successCallback(res)
-          alert('Imóvel atualizado!')
+          this.data.successCallback(res)
         },
         error: (err)=>{
           alert('Ocorreu um erro, tente mais tarde')

@@ -15,9 +15,9 @@ export class SelectComponent implements OnInit  {
   ngOnInit(): void {
 
     if(!this.init){
-      this.startValue = this.options[0]
+      this.startValue = this.options[1].text
     } else{
-      this.startValue = this.init
+      this.startValue = this.init.text
     }
 
   }
@@ -25,9 +25,9 @@ export class SelectComponent implements OnInit  {
   @Input() options: Select[] = []
   @Input() label: string = ''
   @Input() errorMessage: string = ''
-  @Input() init: any = this.options[0]
+  @Input() init: any = {}
 
-  startValue: any
+  startValue: any = ""
   selectId = uuidv4()
 
 }

@@ -14,10 +14,8 @@
       <p>Endereço: <span>{{building.endereco}}</span></p>
       <div class="iptu">IPTU:<span>{{building.iptu}}</span> <app-button (click)="viewBillet(building)"  [icon]="viewIcon" [background]="viewBackground" [text]="viewText"></app-button></div>
       <div class="buttons">
-
-        <app-button [buttonCircle]="buttonCircle" [background]="updateBackground" [icon]="updateIcon"></app-button>
-        <app-button [buttonCircle]="buttonCircle" [background]="deleteBackground" [icon]="deleteIcon"></app-button>
-
+        <app-button [buttonCircle]="buttonCircle" [background]="updateBackground" [icon]="updateIcon" (click)="updateBuilding(building)"></app-button>
+        <app-button [buttonCircle]="buttonCircle" [background]="deleteBackground" [icon]="deleteIcon" (click)="deleteBuilding(building.matricula)"></app-button>
       </div>
 
     </div>

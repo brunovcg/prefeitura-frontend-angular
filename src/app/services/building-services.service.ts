@@ -28,11 +28,11 @@ export class BuildingServicesService {
     return this.httpClient.post(`${building}/api/buildings/`,payload ,httpConfigs())
   }
 
-  update(matricula: string, payload:any){
-    return this.httpClient.patch(`${building}/api/buildings/matricula/${matricula}`,payload, httpConfigs())
+  update(matricula: number, payload:any){
+    return this.httpClient.patch(`${building}/api/buildings/matricula/${matricula}/`,payload, httpConfigs())
   }
 
-  delete(matricula: string){
-    return this.httpClient.patch(`${building}/api/buildings/matricula/${matricula}`, httpConfigs())
+  delete(matricula: number){
+    return this.httpClient.delete(`${building}/api/buildings/matricula/${matricula}/`, httpConfigs())
   }
 }

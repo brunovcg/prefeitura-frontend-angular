@@ -22,6 +22,7 @@ import { BuildingsListComponent } from './pages/buildings/templates/buildings-li
 import {MatDialogModule} from '@angular/material/dialog';
 import { AddBuildingComponent } from './modals/add-building/add-building.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { DeleteBuildingComponent } from './modals/delete-building/delete-building.component';
 
 
 @NgModule({
@@ -44,6 +45,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     NotFoundComponent,
     BuildingsListComponent,
     AddBuildingComponent,
+    DeleteBuildingComponent,
   ],
   imports: [
     BrowserModule,
