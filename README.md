@@ -1,4 +1,4 @@
-# PREFEITURA - FRONT-END
+# PREFEITURA - FRONT-END - ANGULAR
 
 Grupo G:
 
@@ -11,6 +11,7 @@ Grupo G:
 
 Esse projeto faz parte da 3a entrega para o curso de MBA FIAP, trata-se de um protótipo de front-end em ANGULAR 8.
 para simular um portal da prefeitura do Recife, mais clean, direto ao ponto, levando em consideracão as necessidades do usuários.
+Foi baseado na última entrega que fizemos em ReactJS, convertido para angular.
 Será conectado a um back-end em Node.JS usando Express. Aqui faremos um CRUD para imóveis dos usuários.
 
 ## Pré-requisitos
@@ -18,13 +19,6 @@ Será conectado a um back-end em Node.JS usando Express. Aqui faremos um CRUD pa
 - Devemos ter o Node.JS instalado no computador.
 - Caso formos usar o Angular CLI como gerenciador, deve-se ser baixado e instalado,
 - Back-end configurado: <https://github.com/brunovcg/>
-
-## Variáveis de Ambiente
-
-Na raiz do projeto crie um arquivo .env
-
-E nele coloque a seguinte linha de código, temos na raiz um arquivo .env.exemple que mostra como fazer para rodar pegar o endpoint do
-back-end em localhost.
 
 
 ## Instalar Angular CLI
@@ -46,14 +40,15 @@ npm install
 ng serve --open
 ```
 
-
 O projeto vai rodar no localhost:4200 em dev.
 Abra [http://localhost:4200] no navegador para visualizar.
 
 ## Ferramentas e principais bibliotecas utilizadas
 
 - Angular Routing
+- Angular Material
 - Google Icons
+- SCSS (Styles)
 
 
 ## Estrutura
@@ -64,32 +59,17 @@ Abra [http://localhost:4200] no navegador para visualizar.
   - public: HTML
   - src: código fonte do projeto.
       - assets: arquivos anexos (imagens etc).
+      - app
+        
+        - components: componentes reutilizáveis na aplicação.
 
-      - components: componentes reutilizáveis na aplicação.
+        - constants: constantes da aplicação para fácil modificação de regras de negócio.
 
-      - constants: constantes da aplicação para fácil modificação de regras de negócio.
+        - helpers: funções para ajudar no tratamento de dados que pode ser reutilizáveis.
 
-      - helpers: funções para ajudar no tratamento de dados que pode ser reutilizáveis.
+        - pages: componentes que são renderizados como peça principal de cada endpoint.
 
-      - pages: componentes que são renderizados como peça principal de cada endpoint.
-
-      - providers: são colocados provedores para toda a aplicação.
-          - store: armazenado o estado global da aplicação, com estados e funções para modifica-lós.
-
-      - routes: sistema de rotas da aplicação, alterando a url e o conteudo exibido.
-
-      - services: centraliza as chamadas da api, com suas configurações.
-
-      - styles: armazenado os estilos globais da aplicação.
-
-      - App.js: a raiz do aplicativo
-
-      - index.js: a conexão do App com o HTML
-
- - .env: este arquivo contém informação que podem variar por ambiente, por isso devem ser criados sempre que o projeto
-  é baixado ou deployado. Não esta incluso no GIT.
-
- - .env.example: arquivo que serve de exemplo de quais variáveis de ambiente são necessárias no .env
+        - services: centraliza as chamadas da api, com suas configurações.
 
  - .gitignore: Arquivo que informa ao git quais arquivos e diretórios devem ser ignorados.
 
@@ -104,14 +84,6 @@ Abra [http://localhost:4200] no navegador para visualizar.
 
 - Organização dos diretórios:
 
-```txt
-Em cada diretório normalmente teremos como seu nome o nome do componente, dentro destes:
-
-- index.jsx => Código font React.
-
-- styles.js => Código em js que abstrai o CSS utlizando o styled components.
-
-```
 
 ## O Projeto e suas páginas
 
